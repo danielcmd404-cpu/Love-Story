@@ -9,7 +9,6 @@
       margin:0;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-      /* 🌙 Slightly darker background for easier reading */
       background:linear-gradient(-45deg,#4a0031,#800046,#a3005d,#800046);
       background-size:400% 400%;
       animation:gradientBG 12s ease infinite;
@@ -47,7 +46,6 @@
       50%{transform:scale(1.4);opacity:1;}
     }
 
-    /* Buttons */
     button{
       background:rgba(255,255,255,0.25);
       color:#ffffff;
@@ -86,7 +84,7 @@
       color:#ffe6f7;
     }
 
-    /* Gallery */
+    /* GALLERY */
     .image-gallery{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -108,9 +106,13 @@
       transform:scale(1.06);
     }
 
+    /* FIXED + PERFECTLY FITTING IMAGES */
     .image-item img{
       width:100%;
+      height:260px;       /* consistent height */
+      object-fit:cover;   /* fills the box perfectly */
       display:block;
+      border-bottom:3px solid #ffe0f1;
     }
 
     .image-item p{
@@ -159,7 +161,7 @@
       font-style:italic;
     }
 
-    /* Effects */
+    /* Effects (flowers, fireflies, hearts) */
     .petal, .firefly, .heart{
       pointer-events:none;
       position:fixed;
@@ -215,13 +217,20 @@
   <h1>Welcome to Our Love Story ✨💖</h1>
   <div id="countdown"></div>
 
+  <!-- IMAGE GALLERY -->
   <div class="image-gallery">
     <div class="image-item"><img src="1stpic.jpg"><p>First Pic 🩷</p></div>
     <div class="image-item"><img src="1stdance.jpg"><p>Our First Dance 💃</p></div>
     <div class="image-item"><img src="1stbike.jpg"><p>First Bike Ride 🏍️💨</p></div>
     <div class="image-item"><img src="1sttoyrun2.jpg"><p>First Toy Run 🎁</p></div>
     <div class="image-item"><img src="1sttoyrun1.jpg"><p>Toy Run Ride ❤️</p></div>
-    <div class="image-item"><img src="colourrun.jpg"><p>First Colour Run 🌈</p></div>
+    <div class="image-item"><img src="colourrun.jpg"><p>First Colour Run 🏃‍♀️❤️💛💚💙💜🏃‍♂️</p></div>
+    <div class="image-item"><img src="Allergy Season.jpg"><p>Allergy Season 😂</p></div>
+    <div class="image-item"><img src="Beach.jpg"><p>Beach Day 🌊</p></div>
+    <div class="image-item"><img src="Graduation.jpg"><p>Our Graduation 🎓</p></div>
+    <div class="image-item"><img src="Boer.jpg"><p>Boertjies ❤️</p></div>
+    <div class="image-item"><img src="Spring.jpg"><p>Spring Blossoms 🌸</p></div>
+    <div class="image-item"><img src="Troue1.jpg"><p>Wedding Day 💍</p></div>
   </div>
 
   <audio id="bgMusic" loop>
@@ -240,7 +249,6 @@
 
     <h2>✨ Our Future Memories ✨</h2>
     <ul>
-      <!-- Proposal removed & replaced by countdown at top -->
       <li><strong>🏡 Our Home:</strong> Filled with love.</li>
       <li><strong>🌍 Adventures:</strong> Exploring hand in hand.</li>
       <li><strong>👶 Little One:</strong> A miracle of us.</li>
