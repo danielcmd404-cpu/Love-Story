@@ -106,11 +106,12 @@
       transform:scale(1.06);
     }
 
-    /* FIXED + PERFECTLY FITTING IMAGES */
+    /* FIX: DO NOT CUT YOUR FACE — adjust crop upward */
     .image-item img{
       width:100%;
-      height:260px;       /* consistent height */
-      object-fit:cover;   /* fills the box perfectly */
+      height:260px;
+      object-fit:cover;
+      object-position:center top; /* <-- THE FIX */
       display:block;
       border-bottom:3px solid #ffe0f1;
     }
@@ -161,7 +162,6 @@
       font-style:italic;
     }
 
-    /* Effects (flowers, fireflies, hearts) */
     .petal, .firefly, .heart{
       pointer-events:none;
       position:fixed;
@@ -206,6 +206,17 @@
     @keyframes floatUp{
       from{transform:translateY(100vh) scale(1);opacity:1;}
       to{transform:translateY(-20vh) scale(0.6);opacity:0;}
+    }
+
+    /* Mobile fix */
+    @media (max-width: 600px) {
+      .image-item img {
+        height: 180px;
+        object-position: center top; /* mobile face fix also */
+      }
+      .image-gallery {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
