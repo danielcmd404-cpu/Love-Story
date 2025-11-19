@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Love Story 💕🧁✨</title>
+  <style>
+    body{
+      margin:0;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+      /* 🌙 Slightly darker background for easier reading */
+      background:linear-gradient(-45deg,#4a0031,#800046,#a3005d,#800046);
+      background-size:400% 400%;
+      animation:gradientBG 12s ease infinite;
+
+      color:#ffe6f7;
+      text-align:center;
+      overflow-x:hidden;
+    }
+
+    @keyframes gradientBG{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    h1{
+      margin-top:50px;
+      font-size:3.2rem;
+      letter-spacing:1px;
+      text-shadow:0 0 12px #ff9ad6, 0 0 20px #ffa8e0;
+      position:relative;
+    }
+
+    h1::after{
+      content:"💖";
+      position:absolute;
+      right:-40px;
+      top:-5px;
+      animation:pulse 1.8s infinite;
+      font-size:2.5rem;
+    }
+
+    @keyframes pulse{
+      0%,100%{transform:scale(1);opacity:0.8;}
+      50%{transform:scale(1.4);opacity:1;}
+    }
+
+    /* Buttons */
+    button{
+      background:rgba(255,255,255,0.25);
+      color:#ffffff;
+      border:none;
+      padding:12px 20px;
+      border-radius:30px;
+      cursor:pointer;
+      font-weight:bold;
+      font-size:1.1rem;
+      box-shadow:0 0 10px #ffffff80, 0 0 14px #ff80c580;
+      transition:transform 0.3s ease;
+      backdrop-filter:blur(4px);
+    }
+
+    button:hover{
+      transform:translateY(-3px);
+      background:rgba(255,255,255,0.45);
+    }
+
+    #playBtn{
+      position:fixed;
+      top:20px;
+      left:20px;
+      z-index:1000;
+    }
+
+    #countdown{
+      margin-top:25px;
+      font-size:1.3rem;
+      background:rgba(255,255,255,0.18);
+      padding:12px 25px;
+      display:inline-block;
+      border-radius:30px;
+      box-shadow:0 0 12px #ffffff50;
+      backdrop-filter:blur(6px);
+      color:#ffe6f7;
+    }
+
+    /* Gallery */
+    .image-gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
+      margin:40px 20px;
+    }
+
+    .image-item{
+      background:#ffffff;
+      color:#d41472;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(0,0,0,0.45);
+      border:3px solid #ffe0f1;
+      transition:transform 0.3s ease;
+    }
+
+    .image-item:hover{
+      transform:scale(1.06);
+    }
+
+    .image-item img{
+      width:100%;
+      display:block;
+    }
+
+    .image-item p{
+      padding:10px;
+      font-size:1rem;
+      background-color:#ffe6f4;
+      margin:0;
+      font-weight:bold;
+    }
+
+    /* Memory Tree */
+    .memory-tree{
+      background:rgba(255,255,255,0.18);
+      border-radius:30px;
+      padding:35px;
+      margin:60px auto;
+      width:85%;
+      max-width:750px;
+      box-shadow:0 0 25px rgba(255,200,230,0.25);
+      border:2px solid #ffb9df;
+      backdrop-filter:blur(6px);
+    }
+
+    .memory-tree h2{
+      font-size:2.2rem;
+      margin-bottom:25px;
+      text-shadow:0 0 10px #ff8fcf;
+      color:#ffe6f7;
+    }
+
+    .memory-tree ul{
+      list-style:none;
+      padding-left:0;
+    }
+
+    .memory-tree li{
+      margin-bottom:18px;
+      font-size:1.4rem;
+      line-height:1.7;
+    }
+
+    footer{
+      margin:50px 0;
+      font-size:1.2rem;
+      opacity:0.9;
+      font-style:italic;
+    }
+
+    /* Effects */
+    .petal, .firefly, .heart{
+      pointer-events:none;
+      position:fixed;
+      z-index:999;
+    }
+
+    .petal{
+      top:-20px;
+      width:18px;
+      height:18px;
+      background-image:url('https://i.imgur.com/4YvX0dG.png');
+      background-size:cover;
+      animation:fall linear forwards;
+      opacity:0.8;
+    }
+
+    @keyframes fall{
+      to{transform:translateY(100vh) rotate(360deg);opacity:0;}
+    }
+
+    .firefly{
+      width:7px;
+      height:7px;
+      background:#fff9df;
+      border-radius:50%;
+      box-shadow:0 0 12px #fff9df;
+      animation:twinkle 4s ease-in-out infinite;
+    }
+
+    @keyframes twinkle{
+      0%,100%{opacity:0.2;}
+      50%{opacity:1;transform:scale(1.6);}
+    }
+
+    .heart{
+      width:22px;
+      height:22px;
+      background:url('https://i.imgur.com/edO0lZC.png') no-repeat center/contain;
+      animation:floatUp 7s linear infinite;
+    }
+
+    @keyframes floatUp{
+      from{transform:translateY(100vh) scale(1);opacity:1;}
+      to{transform:translateY(-20vh) scale(0.6);opacity:0;}
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="playBtn" onclick="playMusic()">🎵 Play Music</button>
+
+  <h1>Welcome to Our Love Story ✨💖</h1>
+  <div id="countdown"></div>
+
+  <div class="image-gallery">
+    <div class="image-item"><img src="1stpic.jpg"><p>First Pic 🩷</p></div>
+    <div class="image-item"><img src="1stdance.jpg"><p>Our First Dance 💃</p></div>
+    <div class="image-item"><img src="1stbike.jpg"><p>First Bike Ride 🏍️💨</p></div>
+    <div class="image-item"><img src="1sttoyrun2.jpg"><p>First Toy Run 🎁</p></div>
+    <div class="image-item"><img src="1sttoyrun1.jpg"><p>Toy Run Ride ❤️</p></div>
+    <div class="image-item"><img src="colourrun.jpg"><p>First Colour Run 🌈</p></div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="audio-1745177618759.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="memory-tree">
+    <h2>🌸 Our Memory Tree 🌸</h2>
+    <ul>
+      <li><strong>🌟 First Spark:</strong> The way we looked at each other — unforgettable.</li>
+      <li><strong>🎶 Our Song:</strong> “Steal the Show” — our hearts knew.</li>
+      <li><strong>🌅 Our Sunset:</strong> A sky made for us.</li>
+      <li><strong>🍃 Quiet Moments:</strong> Love without words.</li>
+      <li><strong>🚤 Future Dreams:</strong> Our cottage, our warmth, our forever.</li>
+    </ul>
+
+    <h2>✨ Our Future Memories ✨</h2>
+    <ul>
+      <!-- Proposal removed & replaced by countdown at top -->
+      <li><strong>🏡 Our Home:</strong> Filled with love.</li>
+      <li><strong>🌍 Adventures:</strong> Exploring hand in hand.</li>
+      <li><strong>👶 Little One:</strong> A miracle of us.</li>
+      <li><strong>👵 Growing Old:</strong> Still choosing each other.</li>
+    </ul>
+  </div>
+
+  <footer>With all my love, forever yours 💝</footer>
+
+  <script>
+    function playMusic(){
+      const music=document.getElementById('bgMusic');
+      music.volume=0.7;
+      music.play().catch(err=>console.log('Playback blocked:',err));
+      const btn=document.getElementById('playBtn');
+      btn.innerText='🎶 Music Playing';
+      btn.disabled=true;
+      btn.style.opacity='0.6';
+    }
+
+    const targetDate=new Date("July 23, 2026 00:00:00").getTime();
+    setInterval(()=>{
+      const now=new Date().getTime();
+      const distance=targetDate-now;
+
+      if(distance<0){
+        document.getElementById("countdown").innerHTML="💞 Happy Anniversary My Love! 💖";
+        return;
+      }
+
+      const days=Math.floor(distance/(1000*60*60*24));
+      document.getElementById("countdown").innerHTML=`⏳ Anniversary Countdown: <strong>${days}</strong> days left 💕`;
+    },1000);
+
+    setInterval(()=>{
+      const petal=document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left=`${Math.random()*100}vw`;
+      petal.style.animationDuration=`${6+Math.random()*5}s`;
+      document.body.appendChild(petal);
+      setTimeout(()=>petal.remove(),11000);
+    },500);
+
+    setInterval(()=>{
+      const fly=document.createElement('div');
+      fly.classList.add('firefly');
+      fly.style.left=`${Math.random()*100}vw`;
+      fly.style.top=`${Math.random()*100}vh`;
+      document.body.appendChild(fly);
+      setTimeout(()=>fly.remove(),9000);
+    },450);
+
+    setInterval(()=>{
+      const heart=document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left=`${Math.random()*100}vw`;
+      document.body.appendChild(heart);
+      setTimeout(()=>heart.remove(),7000);
+    },900);
+  </script>
+
+</body>
+</html>
