@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Love Story 💕🧁✨</title>
+  <title>Our Christmas Love Story 🎄❤️✨</title>
+
   <style>
     body{
       margin:0;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-      background:linear-gradient(-45deg,#4a0031,#800046,#a3005d,#800046);
+      background:linear-gradient(-45deg,#0b3d20,#c41e3a,#0b3d20,#165b33);
       background-size:400% 400%;
       animation:gradientBG 12s ease infinite;
-
-      color:#ffe6f7;
+      color:#fff7ec;
       text-align:center;
       overflow-x:hidden;
     }
@@ -28,12 +27,12 @@
       margin-top:50px;
       font-size:3.2rem;
       letter-spacing:1px;
-      text-shadow:0 0 12px #ff9ad6, 0 0 20px #ffa8e0;
+      text-shadow:0 0 12px #fce8b2, 0 0 20px #ffd700;
       position:relative;
     }
 
     h1::after{
-      content:"💖";
+      content:"🎄";
       position:absolute;
       right:-40px;
       top:-5px;
@@ -43,7 +42,7 @@
 
     @keyframes pulse{
       0%,100%{transform:scale(1);opacity:0.8;}
-      50%{transform:scale(1.4);opacity:1;}
+      50%{transform:scale(1.3);opacity:1;}
     }
 
     button{
@@ -55,7 +54,7 @@
       cursor:pointer;
       font-weight:bold;
       font-size:1.1rem;
-      box-shadow:0 0 10px #ffffff80, 0 0 14px #ff80c580;
+      box-shadow:0 0 10px #ffd70080, 0 0 14px #ffffff80;
       transition:transform 0.3s ease;
       backdrop-filter:blur(4px);
     }
@@ -79,12 +78,12 @@
       padding:12px 25px;
       display:inline-block;
       border-radius:30px;
-      box-shadow:0 0 12px #ffffff50;
+      box-shadow:0 0 12px #ffd70080;
       backdrop-filter:blur(6px);
-      color:#ffe6f7;
+      color:#fff7ec;
     }
 
-    /* GALLERY */
+    /* Gallery */
     .image-gallery{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -94,11 +93,11 @@
 
     .image-item{
       background:#ffffff;
-      color:#d41472;
+      color:#c41e3a;
       border-radius:18px;
       overflow:hidden;
       box-shadow:0 6px 18px rgba(0,0,0,0.45);
-      border:3px solid #ffe0f1;
+      border:3px solid #c41e3a;
       transition:transform 0.3s ease;
     }
 
@@ -106,50 +105,49 @@
       transform:scale(1.06);
     }
 
-    /* ⭐ FIXED IMAGE CROPPING — FIT PERFECTLY ON ALL SCREENS */
     .image-item img{
       width:100%;
       height:260px;
       object-fit:cover;
-      object-position:center 25%;   /* ⭐ Option C: keeps faces visible */
+      object-position:center 25%;
       display:block;
-      border-bottom:3px solid #ffe0f1;
+      border-bottom:3px solid #c41e3a;
     }
 
-    /* ⭐ MOBILE VERSION — PREVENT FACE CUTTING */
     @media(max-width:600px){
       .image-item img{
         height:220px;
-        object-position:center 20%; /* lift cropping to show more of your faces */
+        object-position:center 20%;
       }
     }
 
     .image-item p{
       padding:10px;
       font-size:1rem;
-      background-color:#ffe6f4;
+      background-color:#fff0f0;
       margin:0;
       font-weight:bold;
+      color:#0b3d20;
     }
 
     /* Memory Tree */
     .memory-tree{
-      background:rgba(255,255,255,0.18);
+      background:rgba(255,255,255,0.2);
       border-radius:30px;
       padding:35px;
       margin:60px auto;
       width:85%;
       max-width:750px;
-      box-shadow:0 0 25px rgba(255,200,230,0.25);
-      border:2px solid #ffb9df;
+      box-shadow:0 0 25px rgba(255,215,0,0.25);
+      border:2px solid #ffd700;
       backdrop-filter:blur(6px);
     }
 
     .memory-tree h2{
       font-size:2.2rem;
       margin-bottom:25px;
-      text-shadow:0 0 10px #ff8fcf;
-      color:#ffe6f7;
+      text-shadow:0 0 10px #ffd700;
+      color:#fff7ec;
     }
 
     .memory-tree ul{
@@ -170,7 +168,7 @@
       font-style:italic;
     }
 
-    /* Effects (flowers, fireflies, hearts) */
+    /* Snow + Lights + Ornaments */
     .petal, .firefly, .heart{
       pointer-events:none;
       position:fixed;
@@ -181,10 +179,10 @@
       top:-20px;
       width:18px;
       height:18px;
-      background-image:url('https://i.imgur.com/4YvX0dG.png');
+      background-image:url('https://i.imgur.com/sR2XkPp.png');
       background-size:cover;
       animation:fall linear forwards;
-      opacity:0.8;
+      opacity:0.9;
     }
 
     @keyframes fall{
@@ -194,9 +192,9 @@
     .firefly{
       width:7px;
       height:7px;
-      background:#fff9df;
+      background:#ffd700;
       border-radius:50%;
-      box-shadow:0 0 12px #fff9df;
+      box-shadow:0 0 12px #ffd700;
       animation:twinkle 4s ease-in-out infinite;
     }
 
@@ -208,7 +206,7 @@
     .heart{
       width:22px;
       height:22px;
-      background:url('https://i.imgur.com/edO0lZC.png') no-repeat center/contain;
+      background:url('https://i.imgur.com/MXxJc6Z.png') no-repeat center/contain;
       animation:floatUp 7s linear infinite;
     }
 
@@ -221,19 +219,18 @@
 
 <body>
 
-  <button id="playBtn" onclick="playMusic()">🎵 Play Music</button>
+  <button id="playBtn" onclick="playMusic()">🎄 Play Christmas Music</button>
 
-  <h1>Welcome to Our Love Story ✨💖</h1>
+  <h1>Welcome to Our Christmas Love Story ✨❤️</h1>
   <div id="countdown"></div>
 
-  <!-- IMAGE GALLERY -->
   <div class="image-gallery">
     <div class="image-item"><img src="1stpic.jpg"><p>First Pic 🩷</p></div>
     <div class="image-item"><img src="1stdance.jpg"><p>Our First Dance 💃</p></div>
     <div class="image-item"><img src="1stbike.jpg"><p>First Bike Ride 🏍️💨</p></div>
     <div class="image-item"><img src="1sttoyrun2.jpg"><p>First Toy Run 🎁</p></div>
     <div class="image-item"><img src="1sttoyrun1.jpg"><p>Toy Run Ride ❤️</p></div>
-    <div class="image-item"><img src="colourrun.jpg"><p>First Colour Run 🏃‍♀️❤️💛💚💙💜🏃‍♂️</p></div>
+    <div class="image-item"><img src="colourrun.jpg"><p>First Colour Run 🏃‍♀️</p></div>
     <div class="image-item"><img src="Allergy Season.jpg"><p>Allergy Season 😂</p></div>
     <div class="image-item"><img src="Beach.jpg"><p>Beach Day 🌊</p></div>
     <div class="image-item"><img src="Graduation.jpg"><p>Our Graduation 🎓</p></div>
@@ -243,29 +240,29 @@
   </div>
 
   <audio id="bgMusic" loop>
-    <source src="audio-1745177618759.mp3" type="audio/mpeg">
+    <source src="Mariah Carey - All I Want For Christmas Is You (Lyrics)_1765223294897.mp3" type="audio/mpeg">
   </audio>
 
   <div class="memory-tree">
-    <h2>🌸 Our Memory Tree 🌸</h2>
+    <h2>🎄 Our Christmas Memories 🎄</h2>
     <ul>
-      <li><strong>🌟 First Spark:</strong> The way we looked at each other — unforgettable.</li>
-      <li><strong>🎶 Our Song:</strong> “Steal the Show” — our hearts knew.</li>
-      <li><strong>🌅 Our Sunset:</strong> A sky made for us.</li>
-      <li><strong>🍃 Quiet Moments:</strong> Love without words.</li>
-      <li><strong>🚤 Future Dreams:</strong> Our cottage, our warmth, our forever.</li>
+      <li><strong>✨ First Spark:</strong> The way we looked at each other — unforgettable.</li>
+      <li><strong>🎄 Our Song:</strong> “Steal the Show” — our hearts knew.</li>
+      <li><strong>🌟 Our Sunset:</strong> A sky made for us.</li>
+      <li><strong>❄️ Quiet Moments:</strong> Love without words.</li>
+      <li><strong>🎁 Future Dreams:</strong> Our cottage, our warmth, our forever.</li>
     </ul>
 
-    <h2>✨ Our Future Memories ✨</h2>
+    <h2>✨ Our Winter Dreams ✨</h2>
     <ul>
       <li><strong>🏡 Our Home:</strong> Filled with love.</li>
-      <li><strong>🌍 Adventures:</strong> Exploring hand in hand.</li>
+      <li><strong>🎄 Adventures:</strong> Exploring hand in hand.</li>
       <li><strong>👶 Little One:</strong> A miracle of us.</li>
       <li><strong>👵 Growing Old:</strong> Still choosing each other.</li>
     </ul>
   </div>
 
-  <footer>With all my love, forever yours 💝</footer>
+  <footer>With all my Christmas love, forever yours 💝🎄</footer>
 
   <script>
     function playMusic(){
@@ -278,18 +275,18 @@
       btn.style.opacity='0.6';
     }
 
-    const targetDate=new Date("July 23, 2026 00:00:00").getTime();
+    const targetDate=new Date("December 25, 2025 00:00:00").getTime();
     setInterval(()=>{
       const now=new Date().getTime();
       const distance=targetDate-now;
 
       if(distance<0){
-        document.getElementById("countdown").innerHTML="💞 Happy Anniversary My Love! 💖";
+        document.getElementById("countdown").innerHTML="🎄 Merry Christmas My Love! ❤️";
         return;
       }
 
       const days=Math.floor(distance/(1000*60*60*24));
-      document.getElementById("countdown").innerHTML=`⏳ Anniversary Countdown: <strong>${days}</strong> days left 💕`;
+      document.getElementById("countdown").innerHTML=`⏳ Christmas Countdown: <strong>${days}</strong> days left 🎄❤️`;
     },1000);
 
     setInterval(()=>{
